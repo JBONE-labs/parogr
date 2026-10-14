@@ -1,7 +1,29 @@
-# Tauri + React + Typescript
+# `PAROGR`
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+<p align="center">
+  <samp>◈ A PROJECT IN THE MAKING ◈</samp>
+</p>
 
-## Recommended IDE Setup
+<p align="center">
+  <img src="https://img.shields.io/badge/STATUS-IN_DEVELOPMENT-ff00cc?style=for-the-badge&labelColor=0a0a0f" alt="Status: In Development" />
+  <img src="https://img.shields.io/badge/PLATFORM-ANDROID-00e5ff?style=for-the-badge&labelColor=0a0a0f" alt="Platform: Android" />
+</p>
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+---
+
+
+> **Parogr is currently under active development.**
+
+The project is a work in progress. Documentation, technical details, and additional information will be published here once development is complete.
+
+---
+
+<p align="center">
+  <samp>INITIALIZING FUTURE SYSTEMS...</samp>
+  <br />
+  <sub>More information coming soon.</sub>
+</p>
+
+<p align="center">
+  <code> [ BUILD IN PROGRESS ] </code>
+</p>
