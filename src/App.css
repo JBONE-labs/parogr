@@ -37,8 +37,7 @@ button {
 
   min-height: 100vh;
   min-height: 100dvh;
-  padding: max(16px, env(safe-area-inset-top, 0px)) 20px
-    max(16px, env(safe-area-inset-bottom, 0px));
+  padding: max(16px, env(safe-area-inset-top, 0px)) 20px max(16px, env(safe-area-inset-bottom, 0px));
 
   display: flex;
   flex-direction: column;
@@ -312,5 +311,81 @@ button:focus-visible {
 
   .display-value {
     font-size: clamp(40px, 12vw, 64px);
+  }
+}
+
+/* Landscape layout for phones */
+@media (orientation: landscape) and (max-height: 500px) {
+  .app {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    padding: 36px 12px 12px;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .header {
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+  }
+
+  .display {
+    flex: 1;
+    width: 40%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+  }
+
+  .display-value {
+    font-size: clamp(24px, 7vh, 44px);
+  }
+
+  .keypad {
+    flex: 1.2;
+    width: auto;
+    max-width: none;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    gap: 2px;
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+  }
+
+  /* Базовое поведение кнопок в landscape: Android */
+  .key {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    font-size: 16px;
+  }
+
+  .key:last-child {
+    aspect-ratio: auto;
+  }
+
+  /* iOS: квадратные элементы внутри ячеек, круглые углы */
+  .theme-ios .key,
+  .theme-ios .key:last-child {
+    width: min(100%, calc((100dvh - 64px) / 5 - 4px));
+    height: min(100%, calc((100dvh - 64px) / 5 - 4px));
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+  }
+
+  .theme-ios .key:last-child {
+    grid-column: span 1;
   }
 }
