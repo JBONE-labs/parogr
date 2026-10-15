@@ -1,0 +1,28 @@
+/* .display, .display-label, .display-value.*/
+.display {
+width: 100%;
+max-width: 360px;
+min-height: 0;
+flex: 1;
+margin: 16px auto;
+
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;
+}
+
+.display-label {
+color: var(--muted-text);
+font-size: 14px;
+}
+
+.display-value {
+max-width: 100%;
+margin-top: 12px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 64px;
+font-variant-numeric: tabular-nums;
+}

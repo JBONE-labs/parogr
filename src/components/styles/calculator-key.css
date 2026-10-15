@@ -1,0 +1,82 @@
+/* .keypad, .key, операторы, стили iOS/Android для клавиш.*/
+.keypad {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.key {
+  min-width: 0;
+  min-height: 64px;
+  aspect-ratio: 1;
+  padding: 0;
+  border: none;
+  border-radius: var(--key-radius);
+  background: var(--key-background);
+  color: var(--text);
+  font-size: 21px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+.key:hover {
+  background: var(--key-hover);
+}
+
+.key:active {
+  transform: scale(0.96);
+}
+
+.key.operator {
+  background: var(--operator-background);
+  color: var(--operator-text);
+}
+
+/* Default calculator theme */
+
+.key:last-child {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  border-radius: var(--key-radius);
+}
+
+/* iOS calculator theme */
+
+.theme-ios .key {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.theme-ios .key.operator {
+  background: var(--operator-background);
+  color: var(--operator-text);
+}
+
+.theme-ios .key:last-child {
+  grid-column: span 1;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.theme-ios .key.zero {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  border-radius: 999px;
+}
+
+/* Android calculator theme */
+
+.theme-android .key {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.theme-android .key.operator {
+  background: var(--operator-background);
+  color: var(--operator-text);
+}

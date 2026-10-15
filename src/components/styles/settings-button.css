@@ -1,0 +1,24 @@
+/* .settings-button, .back-button, состояния кнопок и фокус.*/
+.settings-button,
+.back-button {
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 10px 14px;
+background: transparent;
+color: var(--text);
+font-size: 14px;
+cursor: pointer;
+transition:
+background 0.2s ease,
+color 0.2s ease;
+}
+
+.settings-button,
+.back-button {
+background: var(--key-hover);
+}
+
+.settings-button,
+.back-button {
+transform: scale(0.97);
+}
