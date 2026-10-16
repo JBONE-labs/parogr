@@ -7,7 +7,7 @@ type SettingsScreenProps = {
 };
 
 const SettingsScreen = ({ onBack, theme,
-  onThemeChange}: SettingsScreenProps) => {
+  onThemeChange }: SettingsScreenProps) => {
   return (
     <main className={`app theme-${theme}`}>
       <header className="header settings-header">
@@ -44,6 +44,23 @@ const SettingsScreen = ({ onBack, theme,
             Android style
           </button>
         </div>
+
+        <section className="settings-content">
+          <h2>Privacy</h2>
+
+          <div className="theme-options">
+            <button
+              type="button"
+              className="theme-option"
+              onClick={() => {
+                // Экран настройки кода активации подключим следующим шагом.
+              }}
+            >
+              Encrypt mode code activation
+            </button>
+          </div>
+        </section>
+
       </section>
     </main>
   );
